@@ -7,8 +7,10 @@ const randomIndex = Math.floor(Math.random() * list.length);
 // Select random item from the list
 const randomItem = list[randomIndex];
 
-// Create JSON pointer
-const jsonPointer = `/${randomItem}`;
+// Create JSON pointer with the selected item
+const jsonPointer = {
+  path: `/${randomItem}`
+};
 
 // Output the JSON pointer
-console.log(jsonPointer);
+console.log(JSON.stringify(jsonPointer));
